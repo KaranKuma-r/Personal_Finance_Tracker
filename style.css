@@ -1,8 +1,9 @@
-/* Main navbar */
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   background-color: #154996;
   padding: 10px 20px;
   border-radius: 8px;
@@ -10,16 +11,16 @@
   color: white;
 }
 
-/* Logo */
+
 .nav-left {
-  font-size: 1.3rem;
+  font-size:20px;
   font-weight: bold;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-/* Search */
+
 .nav-center input {
   width: 300px;
   padding: 6px 10px;
@@ -28,7 +29,7 @@
   outline: none;
 }
 
-/* Dark toggle */
+
 .switch {
   position: relative;
   display: inline-block;
@@ -74,7 +75,7 @@ input:checked + .slider::before {
   transform: translateX(24px);
 }
 
-/* Dark mode */
+
 .dark {
   background-color: #1e1e1e;
   color: white;
@@ -92,4 +93,177 @@ input:checked + .slider::before {
 .dark input {
   background-color: #333;
   color: white;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f4f7fa;
+  min-height: 100vh;
+}
+
+ .amount-summary {
+  display: flex;
+  gap: 20px; 
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  justify-content: space-around;
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+ .summary-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 180px;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: #f9fafb;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.summary-box h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.summary-box p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+}
+
+.summary-box.income p {
+  color: #28a745;
+}
+
+.summary-box.expense p {
+  color: #e76b77;
+}  
+ 
+
+.transaction-form{
+  width: 100%;
+  max-width: 600px;
+   background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  margin-bottom: 40px;
+}
+.transaction-form h2{
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+  color: #333
+}
+#transcation .formgroup{
+  display: flex;
+  flex-direction: column;
+}
+#transcation label {
+  margin: 6px;
+  font-size: 16px;
+  color: #555;
+}
+
+#transcation input ,#transcation select {
+  padding: 10px 12px;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  outline: none;
+  transition: border-color 0.3s;
+}
+#transcation input:focus,
+#transcation select:focus {
+  border-color: #5262bc;
+}
+
+.button-submit{
+  width: 100%;
+  background-color:#0287c3;
+  color: white;
+    padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+#displayHistory {
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  overflow-y: auto; 
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+#displayHistory h2{
+  display: flex;
+  justify-content: center;
+}
+#transactionItems{
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.transaction-items {
+  background-color: #fff;
+  border-left: 5px solid #482fe9;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.transaction-items .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color:#4caf50; 
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn {
+  background-color: #d11b59; 
+  color: rgb(234, 231, 231);
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
 }

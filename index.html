@@ -1,31 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Personal Finance Tracker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Personal Finance Tracker</title>
 </head>
+
 <body>
-   <nav class="navbar">
-  <div class="nav-left">
-    💰 <span>MyTracker</span>
-  </div>
+  <nav class="navbar">
+    <div class="nav-left">
+      💰 <span>MyTracker</span>
+    </div>
 
-  <div class="nav-center">
-    <input type="text" id="searchInput" placeholder="Search transactions..." />
-  </div>
+    <div class="nav-center">
+      <input type="text" id="searchInput" placeholder="Search transactions..." />
+    </div>
 
-  <div class="nav-right">
-    <label class="switch">
-      <input type="checkbox" id="darkToggle" />
-      <span class="slider"></span>
-    </label>
-  </div>
-</nav>
+    <div class="nav-right">
+      <label class="switch">
+        <input type="checkbox" id="darkToggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </nav>
 
- <h1>Hello World</h1>
- <script src="index.js"></script>
+  <!-- <<<----Transaction History>>>>>> -->
+
+  <main class="main-content">
+    <section class="amount-summary">
+      <div class="summary-box">
+        <h3>Total Balance</h3>
+        <p id="totalBalance">₹0</p>
+      </div>
+      <div class="summary-box income">
+        <h3>Income</h3>
+        <p id="incomeAmount">₹0</p>
+      </div>
+      <div class="summary-box expense">
+        <h3>Expense</h3>
+        <p id="expenseAmount">₹0</p>
+      </div>
+    </section>
+
+
+
+<!-- ---------Transaction Forn-------- -->
+    <section class="transaction-form">
+      <h2>Add Transcation</h2>
+      <form action="" id="transcation">
+        <div class="formgroup">
+          <label for="title">Title</label>
+          <input type="text" id="title" placeholder="Salary for rent food etc...." required="true">
+        </div>
+
+        <div class="formgroup">
+          <label for="amount">Amount(₹)</label>
+          <input type="number" id="amount" placeholder="eg...5000" required="true">
+        </div>
+
+        <div class="formgroup">
+            <label for="type">Type</label>
+            <select name="type" id="type" required>
+              <option value="">Select Type</option>
+              <option value="income"><span class="transaction-type">income</span></option>
+              <option value="expense">Expense</option>
+            </select>
+        </div>
+
+         <div class="formgroup">
+          <label for="date">Date</label>
+          <input type="date" id="date" required>
+         </div>
+
+         <button type="submit" class="button-submit">Add Transaction</button>
+      </form>
+
+    </section>
+
+    <section>
+      <div id="displayHistory">
+        <h2>Transcation List</h2>
+      <ul id="transactionItems"></ul>
+      </div>
+    </section>
+
+  </main>
+
+
+
+
+
+  <script src="index.js"></script>
 </body>
-</html>
 
+</html>
