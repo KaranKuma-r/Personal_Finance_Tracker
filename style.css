@@ -75,25 +75,27 @@ input:checked + .slider::before {
   transform: translateX(24px);
 }
 
-
 .dark {
-  background-color: #1e1e1e;
-  color: white;
-}
-
-.dark .container {
-  background-color: #2c2c2c;
-  color: white;
+  background-color:#191919;
+  color: #f0f0f0;
 }
 
 .dark .navbar {
-  background-color: #222;
-}
-
-.dark input {
-  background-color: #333;
+  background-color: #5e5e5e;
   color: white;
 }
+.dark #displayHistory {
+  background-color: #1e1e1e;
+  color: white;
+}
+.dark .transaction-items {
+  background-color: #2a2a2a;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
@@ -102,7 +104,20 @@ input:checked + .slider::before {
   background-color: #f4f7fa;
   min-height: 100vh;
 }
-
+.dark main{
+  background-color: #25201e;
+  border-radius: 2%;
+  border-color: 2px wheat;
+}
+.dark .amount-summary{
+  background-color: #8a7f7b;
+}
+.dark .transaction-form{
+ background-color: #8a7f7b;
+}
+.dark label {
+  color: white;
+}
  .amount-summary {
   display: flex;
   gap: 20px; 
@@ -172,7 +187,7 @@ input:checked + .slider::before {
 #transcation label {
   margin: 6px;
   font-size: 16px;
-  color: #555;
+  color: #100d0d;
 }
 
 #transcation input ,#transcation select {
